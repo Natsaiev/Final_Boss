@@ -5,10 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meetup</title>
-    <link rel="stylesheet" href="styles/style_event.scss" />
+    <link rel="stylesheet" href="styles/style_event.css" />
   </head>
   <body>
-   
+    <nav>
+      <div class="container_nav">
+        <div class="container_left">
+          <a href="./meetup_main.html"
+            ><img src="assets/images/Meetup.svg" alt="Meetup"
+          /></a>
+          <div class="search_container">
+            <div class="search_icon">
+              <img src="assets/Icons/search_gray.svg" alt="" />
+            </div>
+            <input
+              class="search_events"
+              type="search"
+              placeholder="Search events"
+            />
+            <input
+              id="search_location"
+              type="search"
+              placeholder="Search location"
+            />
+            <button class="search_button">
+              <img src="assets/Icons/search_white.svg" alt="search" />
+            </button>
+          </div>
+        </div>
+        <div class="container_right">
+          <div class="english">
+            <img
+              src="assets/Icons/language_24dp_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+            <p>English</p>
+          </div>
+          <button class="logIn">Log In</button>
+          <button class="signUp">Sign up</button>
+        </div>
+      </div>
+    </nav>
   </body>
   <script src="scripts/index.js"></script>
 </html>

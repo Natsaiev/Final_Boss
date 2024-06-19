@@ -1,1 +1,85 @@
-/*# sourceMappingURL=style_event.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*====================NAVBAR======================*/
+.container_nav {
+  height: 65px;
+  display: flex;
+}
+
+.container_left {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  gap: 70px;
+  padding: 20px;
+}
+
+.search_container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.search_container input {
+  border: none;
+  padding: 20px;
+  outline: none;
+}
+
+.search_icon {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+#search_location {
+  border-left: 1px solid #ccc;
+}
+
+.search_button {
+  background-color: #ff5a5f;
+  border: none;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.container_right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 50%;
+  gap: 25px;
+  padding-right: 50px;
+}
+
+.english {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.logIn {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.signUp {
+  background-color: #00798A;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  width: 85px;
+  padding: 15px;
+}/*# sourceMappingURL=style_event.css.map */
