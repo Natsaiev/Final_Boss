@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -14,7 +15,7 @@
 .container_left {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 50vw;
   gap: 70px;
   padding: 20px;
 }
@@ -25,12 +26,15 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
+  flex-grow: 1; /* Позволяет контейнеру поиска расти, заполняя доступное пространство */
 }
 
 .search_container input {
   border: none;
   padding: 20px;
   outline: none;
+  flex-grow: 1; /* Позволяет input расти, заполняя доступное пространство внутри контейнера */
+  min-width: 0; /* Предотвращает input от выхода за пределы контейнера */
 }
 
 .search_icon {

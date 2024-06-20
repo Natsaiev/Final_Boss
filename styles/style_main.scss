@@ -21,12 +21,16 @@
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
+    flex-grow: 1; /* Позволяет контейнеру поиска расти, заполняя доступное пространство */
+   
 }
 
 .search_container input {
     border: none;
     padding: 20px;
     outline: none;
+    flex-grow: 1; /* Позволяет input расти, заполняя доступное пространство внутри контейнера */
+    min-width: 0; /* Предотвращает input от выхода за пределы контейнера */
 }
 .search_icon {
     padding: 0 10px;
@@ -270,4 +274,5 @@ font-weight: 600;
     font-size: 16px;
     font-weight: 400;
 }
+
 
