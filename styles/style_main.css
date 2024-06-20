@@ -94,6 +94,7 @@
 .signUp:hover {
   background-color: #005C6B;
   color: #DDDDDD;
+  transform: scale(1.05);
 }
 
 /*===============================MAIN==============================*/
@@ -138,6 +139,7 @@
 .thePeopleLeft > a:hover {
   background-color: #005C6B;
   color: #DDDDDD;
+  transform: scale(1.05);
 }
 
 .thePeopleRight {
@@ -162,7 +164,7 @@
 
 .container_heading_left,
 .container_heading_online > h3 {
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 600;
 }
 
@@ -230,6 +232,7 @@
 .container_cards:hover {
   border: 1px solid #00798A;
   box-shadow: 0 0 10px rgba(0, 121, 138, 0.5);
+  transform: scale(1.05);
 }
 
 .container_cards .photo_events img {
@@ -289,4 +292,54 @@
 /*=========================online_events=====================*/
 .online_events {
   margin-top: 100px;
+}
+
+/*=======================container_join_meetup=======================================*/
+.container_join_meetup {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  background-color: #F7FBFB;
+}
+
+.container_join_meetup_left {
+  margin: auto 0;
+  max-width: 60%;
+  padding: 55px;
+}
+
+.container_join_meetup_left > h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.container_join_meetup_left > p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.container_join_meetup_left > button {
+  color: #FFFFFF;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #E32359;
+  cursor: pointer;
+  width: 180px;
+  height: 45px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container_join_meetup_left > button:hover {
+  background-color: #C91E50;
+  transform: scale(1.05);
+}
+
+.container_join_meetup_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
 }/*# sourceMappingURL=style_main.css.map */
