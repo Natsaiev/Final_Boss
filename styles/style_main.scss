@@ -364,7 +364,7 @@ font-weight: 600;
     text-align: center;
     width: 200px; /* Задайте нужную ширину */
     height: 150px; /* Задайте нужную высоту */
-    background-color: #f8f8f8; /* Пример цвета фона */
+    background-color: #F7FBFB; /* Пример цвета фона */
     border-radius: 10px;
     gap: 15px;
 }
@@ -374,4 +374,66 @@ font-weight: 600;
     font-weight: 500;
     display: flex;
     justify-content: center;
+}
+
+.categories:focus {
+    border: 1px solid #00798A;
+    box-shadow: 0 0 10px rgba(0, 121, 138, 0.5);
+}
+.categories:hover {
+    border: 1px solid #00798A; 
+    box-shadow: 0 0 10px rgba(0, 121, 138, 0.5); 
+    transform: scale(1.05);
+    cursor: pointer;
+}
+/*=================================popular_cities========================================*/
+
+.popular_cities{
+    margin-top: 100px;
+}
+
+.popular_cities > h3{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.popular_cities > p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #707070;
+    margin-bottom: 30px;
+}
+
+.container_photo_popular_cities{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cards_photo_cities{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.cards_photo_cities > p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.cards_photo_cities:focus {
+    border: 1px solid #00798A;
+    box-shadow: 0 0 10px rgba(0, 121, 138, 0.5);
+}
+.cards_photo_cities:hover {
+    border: 1px solid #00798A; 
+    box-shadow: 0 0 10px rgba(0, 121, 138, 0.5); 
+    transform: scale(1.05);
+    cursor: pointer;
 }
