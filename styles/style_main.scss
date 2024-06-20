@@ -73,6 +73,7 @@
     border: none;
     background-color: white;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .signUp{
@@ -143,7 +144,8 @@ text-decoration: none;
     margin-top: 150px;
 }
 
-.container_heading{
+.container_heading,
+.container_heading_online{
     display: flex;
     justify-content: space-between
 }
@@ -153,7 +155,8 @@ text-decoration: none;
     gap: 20px;
 }
 
-.container_heading_left>h3{
+.container_heading_left,
+.container_heading_online >h3{
 font-size: 40px;
 font-weight: 600;
 }
@@ -173,7 +176,8 @@ font-weight: 600;
     border-radius: 5px;
 }
 
-.container_heading>button{
+.container_heading > button,
+.container_heading_online >button{
     color: #00798A;
     font-size: 25px;
     border: none;
@@ -181,14 +185,16 @@ font-weight: 600;
     cursor: pointer;
 }
 
-.container_heading > button:hover {
+.container_heading > button:hover,
+.container_heading_online >button:hover {
     background-color: #ffffff; 
     color: #007a8a47; 
     
 }
 
 
-.container_heading > button:focus {
+.container_heading > button:focus,
+.container_heading_online >button:focus {
     outline: none; 
     background-color: #ffffff; 
     color: #007a8a47; 
@@ -274,5 +280,12 @@ font-weight: 600;
     font-size: 16px;
     font-weight: 400;
 }
+
+/*=========================online_events=====================*/
+
+.online_events{
+    margin-top: 100px;
+}
+
 
 
