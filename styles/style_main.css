@@ -443,7 +443,7 @@
 .how_meetup > h3 {
   font-size: 28px;
   font-weight: 600;
-  margin-top: 100px;
+  margin: 100px 0 30px 0;
 }
 
 .container_discover_start {
@@ -492,5 +492,63 @@
 .start_description > button:focus {
   outline: none;
   background-color: #F7FBFB;
+  color: rgba(0, 122, 138, 0.2784313725);
+}
+
+/*========================friendships=========================*/
+.friendships > h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 100px 0 25px 0;
+}
+
+.friendships > p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  color: #707070;
+  max-width: 80%;
+}
+
+.friendships_description {
+  display: flex;
+  gap: 30px;
+}
+
+.cards_friednships {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards_friednships > h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cards_friednships > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #707070;
+}
+
+.cards_friednships > button {
+  color: #00798A;
+  font-size: 16px;
+  border: none;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  max-width: 190px;
+}
+
+.cards_friednships > button:hover {
+  background-color: #FFFFFF;
+  color: rgba(0, 122, 138, 0.2784313725);
+}
+
+.cards_friednships > button:focus {
+  outline: none;
+  background-color: #FFFFFF;
   color: rgba(0, 122, 138, 0.2784313725);
 }/*# sourceMappingURL=style_main.css.map */
