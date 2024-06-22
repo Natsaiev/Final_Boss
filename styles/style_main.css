@@ -586,4 +586,29 @@ footer {
   color: #FFFFFF;
   background-color: transparent;
   cursor: pointer;
-}/*# sourceMappingURL=style_main.css.map */
+}
+
+/*=======================================footer_navigation=====================================*/
+.footer_navigation {
+  display: flex;
+  margin-top: 25px;
+}
+
+.footer_nav_section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 5px;
+  color: #F6F7F8;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer_nav_section li {
+  margin-bottom: 5px;
+  color: #C5C4C4;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+/*=======================================footer_nav_section=====================================*//*# sourceMappingURL=style_main.css.map */
