@@ -1,18 +1,25 @@
 @import "reset";
+@import "mixins";
+
+button:hover {
+  cursor: pointer;
+}
 
 /*====================NAVBAR======================*/
 
-.container_nav{
-    height: 65px;
+nav{
     display: flex;
+    @include flexBox(row, space-between, center);
 }
 
-.container_left{
-    display: flex;
-    align-items: center;
-    width: 50%;
-    gap: 70px;
-    padding: 20px;
+/* =================== SEARCH CONTAINER ============ */
+
+.container_logo{
+    margin-left: 20px;
+}
+
+.container_block{
+    margin:0 15px ;   
 }
 
 .search_container {
@@ -21,8 +28,8 @@
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
-    flex-grow: 1; /* Позволяет контейнеру поиска расти, заполняя доступное пространство */
-   
+    flex-grow: 1;
+    max-width: 40vw;
 }
 
 .search_container input {
@@ -91,31 +98,41 @@
     transform: scale(1.05);
 }
 
+
 /*===============================MAIN==============================*/
-.container_main{
+main {
+    @include flexBox(column, center, center);
+    margin-top: 46px;
+    gap: 40px;
+    
+  }
+
+.section_main{
 max-width: 80%;
 margin: 0 auto;
 }
 /*=============================THEPEOPLE===========================*/
 
 .thePeople{
- display: flex;
- margin-top: 100px;
+    @include flexBox(row, space-between, center);
+    margin-top: 50px;
+    width: 100%;
+    margin-bottom: 80px;
+    gap: 45px;
 }
 
 .thePeopleLeft{
+    @include flexBox(column, center, start);
     width: 50%;
-    display: flex;
-    flex-direction: column;
     gap: 30px;
 }
 
-.thePeopleLeft>h1{
+.thePeopleLeft > h1 {
     font-size: 42px;
     font-weight: 700;
 }
 
-.thePeopleLeft>p{
+.thePeopleLeft > p {
     font-size: 16px;
     font-weight: 400;
 }
@@ -294,54 +311,61 @@ font-weight: 600;
 /*=======================container_join_meetup=======================================*/
 
 .container_join_meetup{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 20px;
+    width: 100%;
     margin-top: 100px;
-    display: flex;
-    flex-direction: row;
     background-color: #F7FBFB;
-}
-
-.container_join_meetup_left{
-    margin: auto 0;
-    max-width: 60%;
-    padding: 55px;
-}
-
-.container_join_meetup_left >h3{
-    font-size:24px;
-    font-weight: 600;
-    margin-bottom: 25px;
-}
-
-.container_join_meetup_left > p{
-    font-size:16px;
-    font-weight: 400;
-    margin-bottom: 25px;
-}
-
-.container_join_meetup_left > button {
-    color: #FFFFFF;
-    font-size: 16px;
-    border: none;
+    padding: 20px 50px;
     border-radius: 10px;
-    background-color: #E32359;
-    cursor: pointer;
-    width: 180px;
-    height: 45px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    gap: 10px;
+
+    h3{
+        font-size:24px;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    p{
+       font-size:16px;
+       font-weight: 400;
+       margin-bottom: 25px;
+    }
+
+    button {
+        color: #FFFFFF;
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        background-color: #E32359;
+        cursor: pointer;
+        width: 180px;
+        height: 45px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #C91E50;
+        transform: scale(1.05);
+    }
+
+    .img_hands{
+        grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    align-self: center;
+    justify-self: end;
+
+    }
+
 }
 
-.container_join_meetup_left > button:hover {
-    background-color: #C91E50;
-    transform: scale(1.05);
-}
 
 
-.container_join_meetup_right{
-display: flex;
-justify-content: center;
-align-items: center;
-width: 40%;
-}
+
+
 
 /*===============================explore_top_categories====================================*/
 
@@ -353,8 +377,9 @@ font-weight: 600;
 }
 
 .container_categories{
-    display: flex;
+    @include flexBox(row, center, normal);
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .categories{
@@ -363,11 +388,12 @@ font-weight: 600;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 200px; /* Задайте нужную ширину */
-    height: 150px; /* Задайте нужную высоту */
+    width: 135px; /* Задайте нужную ширину */
+    height: 112px; /* Задайте нужную высоту */
     background-color: #F7FBFB; /* Пример цвета фона */
     border-radius: 10px;
     gap: 15px;
+    padding: 5px;
 }
 
 .categories > p{
@@ -407,15 +433,14 @@ font-weight: 600;
 }
 
 .container_photo_popular_cities{
-    display: flex;
-    justify-content: space-around;
+    @include flexBox(row, space-between, normal);
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .cards_photo_cities{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
+    @include flexBox(column, center, center);
+        gap: 25px;
     border: 1px solid transparent;
     border-radius: 10px;
     transition: border 0.3s ease, box-shadow 0.3s ease;
@@ -440,6 +465,10 @@ font-weight: 600;
 }
 
 /*==============================how_meetup============================*/
+.how_meetup{
+    width: 100%;
+}
+
 
 .how_meetup>h3{
 font-size: 28px;
@@ -448,7 +477,7 @@ margin: 100px 0 30px 0;
 }
 
 .container_discover_start{
-    display: flex;
+    @include flexBox(row, space-between, center);
     gap: 20px;
 }
 
@@ -516,13 +545,16 @@ padding: 20px;
 }
 
 .friendships_description{
-    display: flex;
+    @include flexBox(row, center,center);
+    flex-wrap: wrap;
+    max-width: 100%;
     gap: 30px;
 }
 
 .cards_friednships{
     display: flex;
     flex-direction: column;
+    max-width: 380px;
     gap: 20px;
 }
 
@@ -582,7 +614,7 @@ footer {
     border-bottom: 1px solid #707070;
 }
 
-.footer_call_to_action > p{
+.footer_call_to_action > h4{
 font-size:16px ;
 font-weight: 600;
 color: #F6F7F8;
@@ -595,6 +627,12 @@ color: #F6F7F8;
     color: #FFFFFF;
     background-color: transparent;
     cursor: pointer;
+}
+.footer_call_to_action > button:hover{
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.05);
 }
 
 /*=======================================footer_navigation=====================================*/
@@ -628,6 +666,17 @@ color: #F6F7F8;
 font-size: 16px;
 font-weight: 400;
 margin-bottom: 25px;
+}
+
+.footer_nav_section li {
+    font-size: 14px;
+    border: none;
+    background-color: #212121;
+    cursor: pointer;
+}
+
+.footer_nav_section li:hover{
+    color: #FFFFFF;
 }
 
 .container_social{
@@ -765,5 +814,228 @@ margin-bottom: 25px;
     opacity: 1;
   }
 
+.store{
+@include flexBox(row, center, center);
+}
 
-  
+.footer-legal,
+.footer-legal ul{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.footer-legal li{
+    color: #C5C4C4;
+    font-size: 14px;
+    font-weight: 400;
+    list-style-type: none;
+    cursor: pointer;
+}
+.footer-legal li:hover{
+    color: #FFFFFF;
+}
+
+.footer-legal p{
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+}
+.footer-legal{
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 1024px){
+    nav{
+        gap: 15px;
+        .container_right{
+            padding-right: 20px;
+        }
+    }
+    footer{
+        .container_social{
+            @include flexBox(column, center, start);
+            gap: 35px;
+            .store{
+                padding-left: 22px;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+    /*========================NAVBAR 768PX ================================*/
+       
+        nav {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 5px;
+            margin: 0;
+          }
+    
+          .container_logo {
+              grid-row-start: 1;
+              grid-column-start: 1;
+              margin-left: 25px;
+            }
+        .search_container{
+            max-width: 100%;
+        }
+        .search_block{
+            grid-column: span 2;
+            margin: 0 20px;
+    
+            .search_events {
+                width: 100%;
+                border-right: none;
+                margin: 0 15px;
+              }
+    
+              #search_location {
+                display: none;
+              }
+        }
+        .container_right {
+            @include flexBox (row, end, center);
+            grid-row-start: 1;
+            grid-column-start: 2;
+            gap: 10px;
+            width: 100%;
+            padding-right: 20px;
+            .english p {
+              font-size: 1.2rem;
+            }
+        }
+        
+        
+    /*===============================MAIN 768PX==============================*/
+    /*===============================THEPEOPLE==============================*/
+    .thePeople{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 0 5% 0 5%;
+        
+       }
+
+       .thePeopleLeft{
+        gap: 15px;
+        width: 100%;
+        h1{
+        font-size: 2rem;
+
+        }
+        p{
+            font-size: 14px;
+            
+        }
+
+        a{
+            display: none;
+        }
+       }
+
+       .thePeopleRight{
+        img {
+            width: 270px;
+          }
+       }
+       
+       /*===============================CONTAINER_EVENTS_NEAR==============================*/
+
+       .container_events_near{
+       
+        .container_heading{
+            
+            .container_heading_left{
+                @include flexBox(row, space-between, center);
+            h3{
+                font-size: 1.5rem;
+            }
+            .mountain{
+                font-size: 1.5rem;
+            }
+            }
+            button{
+                display: none;
+            }
+        }
+       
+       }
+       /*===============================CONTAINER_PHOTO_EVENTS==============================*/
+       .container_photo_events{
+           @include flexBox(column, space-between, normal);
+           gap: 20px;
+           .container_cards{
+            @include flexBox(row, space-between, normal);
+            gap: 10px;
+               border-top: 1px solid #D9D9D9;
+               border-radius: initial;
+            max-width: 100%;
+            padding-top:50px ;
+               
+            
+            .event_name{
+                @include flexBox(column, center, start); 
+                
+            }
+       }
+       }
+
+       .container_heading_online > button{
+           display: none;
+        }
+        /*===============================CONTAINER_JOIN_MEETUO==============================*/
+
+       .container_join_meetup{
+        @include flexBox(column, center, center); 
+        h3{
+            align-self: flex-start;
+        }
+       }
+
+/*===============================CONTAINER_DISCOVER_START==============================*/
+       
+
+.container_discover_start{
+        @include flexBox(column, center, center); 
+        width: 100%;
+        gap: 20px;
+        .discover, .start{
+            width: 100%;
+        }
+    }
+
+/*===============================CONTAINER_FRIENDSHIPS==============================*/
+/*===============================FOOTER==============================*/
+ footer {
+    .footer_navigation{
+        gap: 15px;
+    }
+    .icons{
+        display: none;
+    }
+    .icons_mobile{
+        @include flexBox(row, center, center);
+        gap: 20px;
+}
+.store{
+    display: none;
+}
+.footer-legal > ul {
+    display: none;
+}
+}
+}
+
+@media (min-width: 769px){
+    .icons_mobile{
+        display: none;
+    }
+    .icons {
+        display: inline-flex;
+    }
+}
+

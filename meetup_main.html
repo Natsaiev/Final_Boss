@@ -12,50 +12,53 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
     <nav>
-      <div class="container_nav">
-        <div class="container_left">
-          <a href="./meetup_main.html"
-            ><img src="assets/images/Meetup.svg" alt="Meetup"
-          /></a>
-          <div class="search_container">
-            <div class="search_icon">
-              <img src="assets/Icons/search_gray.svg" alt="" />
-            </div>
-            <input
-              class="search_events"
-              type="search"
-              placeholder="Search events"
-            />
-            <input
-              id="search_location"
-              type="search"
-              placeholder="Search location"
-            />
-            <button class="search_button">
-              <img src="assets/Icons/search_white.svg" alt="search" />
-            </button>
+      <div class="container_logo">
+        <a href="./meetup_main.html"
+          ><img src="assets/images/Meetup.svg" alt="Meetup"
+        /></a>
+      </div>
+      <div class="search_block">
+        <form class="search_container">
+          <div class="search_icon">
+            <img src="assets/Icons/search_gray.svg" alt="search" />
           </div>
+          <input
+            class="search_events"
+            type="search"
+            placeholder="Search events"
+          />
+          <input
+            id="search_location"
+            type="search"
+            placeholder="Search location"
+          />
+          <button class="search_button">
+            <img src="./assets/Icons/search_white.svg" alt="search" />
+          </button>
+        </form>
+      </div>
+      <div class="container_right">
+        <div class="english">
+          <img
+            src="assets/Icons/language_24dp_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />
+          <p>English</p>
         </div>
-        <div class="container_right">
-          <div class="english">
-            <img
-              src="assets/Icons/language_24dp_FILL0_wght400_GRAD0_opsz24.svg"
-              alt=""
-            />
-            <p>English</p>
-          </div>
-          <button class="logIn">Log In</button>
-          <button class="signUp">Sign up</button>
-        </div>
+        <button class="logIn">Log In</button>
+        <button class="signUp">Sign up</button>
       </div>
     </nav>
     <main>
-      <div class="container_main">
-        <div class="thePeople">
+      <section class="section_main">
+        <section class="thePeople">
           <div class="thePeopleLeft">
             <h1>The people platform—Where interests become friendships</h1>
             <p>
@@ -68,8 +71,8 @@
           <div class="thePeopleRight">
             <img src="assets/images/people.svg" alt="people" />
           </div>
-        </div>
-        <div class="container_events_near">
+        </section>
+        <section class="container_events_near">
           <div class="container_heading">
             <div class="container_heading_left">
               <h3>Events near</h3>
@@ -318,8 +321,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="online_events">
+        </section>
+        <section class="online_events">
           <div class="container_heading_online">
             <h3>Upcoming online events</h3>
             <button>See all events</button>
@@ -443,22 +446,18 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="container_join_meetup">
-          <div class="container_join_meetup_left">
-            <h3>Join Meetup</h3>
-            <p>
-              People use Meetup to meet new people, learn new things, find
-              support, get out of their comfort zones, and pursue their
-              passions, together. Membership is free.
-            </p>
-            <button>Sign up</button>
-          </div>
-          <div class="container_join_meetup_right">
-            <img src="assets/images/hands.png" alt="hands" />
-          </div>
-        </div>
-        <div class="explore_top_categories">
+        </section>
+        <section class="container_join_meetup">
+          <h3>Join Meetup</h3>
+          <img class="img_hands" src="assets/images/hands.png" alt="hands" />
+          <p>
+            People use Meetup to meet new people, learn new things, find
+            support, get out of their comfort zones, and pursue their passions,
+            together. Membership is free.
+          </p>
+          <button>Sign up</button>
+        </section>
+        <section class="explore_top_categories">
           <h3>Explore top categories</h3>
           <div class="container_categories">
             <div class="categories">
@@ -494,8 +493,8 @@
               <p>Games</p>
             </div>
           </div>
-        </div>
-        <div class="popular_cities">
+        </section>
+        <section class="popular_cities">
           <h3>Popular cities on Meetup</h3>
           <p>
             Looking for fun things to do near you? See what Meetup organizers
@@ -526,8 +525,8 @@
               <p>Miami</p>
             </div>
           </div>
-        </div>
-        <div class="how_meetup">
+        </section>
+        <section class="how_meetup">
           <h3>How Meetup works</h3>
           <div class="container_discover_start">
             <div class="discover">
@@ -556,8 +555,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="friendships">
+        </section>
+        <section class="friendships">
           <h3>Friendships are made on Meetup</h3>
           <p>
             Since 2002, members have used Meetup to make new friends, meet
@@ -600,13 +599,13 @@
               <button>Read more</button>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </main>
     <footer>
       <div class="section_footer">
         <div class="footer_call_to_action">
-          <p>Create your own Meetup group.</p>
+          <h4>Create your own Meetup group.</h4>
           <button>Get Started</button>
         </div>
         <div class="footer_navigation">
@@ -655,7 +654,7 @@
                   <span></span>
                   <span class="fab fa-facebook-f"></span>
                 </div>
-                <div class="text">Facebook</div>
+                <p class="text">Facebook</p>
               </a>
               <a
                 href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJteCI6IjIifQ%3D%3D%22%7D"
@@ -667,7 +666,7 @@
                   <span></span>
                   <span class="fab fa-twitter"></span>
                 </div>
-                <div class="text">Twitter</div>
+                <p class="text">Twitter</p>
               </a>
               <a href="https://www.instagram.com/">
                 <div class="layer">
@@ -677,7 +676,7 @@
                   <span></span>
                   <span class="fab fa-instagram"></span>
                 </div>
-                <div class="text">Instagram</div>
+                <p class="text">Instagram</p>
               </a>
               <a href="https://www.tiktok.com/explore">
                 <div class="layer">
@@ -687,7 +686,7 @@
                   <span></span>
                   <span class="fab fa-tiktok"></span>
                 </div>
-                <div class="text">TikTok</div>
+                <p class="text">TikTok</p>
               </a>
               <a href="https://www.youtube.com/?app=desktop&hl=uk">
                 <div class="layer">
@@ -697,19 +696,61 @@
                   <span></span>
                   <span class="fab fa-youtube"></span>
                 </div>
-                <div class="text">YouTube</div>
+                <p class="text">YouTube</p>
+              </a>
+            </div>
+            <div class="icons_mobile">
+              <a href="https://de-de.facebook.com/" class="facebook">
+                <img
+                  src="assets/Icons/Link - Meetup on Facebook → SVG.svg"
+                  alt="facebook"
+                />
+              </a>
+
+              <a href="https://www.twitter.com" class="twitter">
+                <img
+                  src="assets/Icons/Link - Meetup on Twitter → SVG.svg"
+                  alt="twitter"
+                />
+              </a>
+
+              <a href="https://www.youtube.com" class="youtube">
+                <img
+                  src="assets/Icons/Link - Meetup on YouTube → SVG.svg"
+                  alt="youtube"
+                />
+              </a>
+
+              <a href="https://www.instagram.com" class="instagram">
+                <img
+                  src="assets/Icons/Link - Instagram → SVG.svg"
+                  alt="instagram"
+                />
+              </a>
+
+              <a href="https://www.tiktok.com" class="tiktok">
+                <img src="assets/Icons/Link - TikTok → SVG.svg" alt="tiktok" />
               </a>
             </div>
             <div class="store">
-              <a href="https://play.google.com/store/games?device=windows&gl=DE&utm_source=emea_Med&utm_medium=hasem&utm_content=Sep2020&utm_campaign=Evergreen&pcampaignid=MKT-EDR-emea-de-1707522-Med-hasem-py-Evergreen-Sep2020-Text_Search_BKWS%7CONSEM_kwid_43700008794262696&gad_source=1&gclid=CjwKCAjw7NmzBhBLEiwAxrHQ-T2izqgR6qFTMzFJWCxXqmIL71SJdKTtZRed_jXDHREdOTBRCpfNUxoCOuoQAvD_BwE&gclsrc=aw.ds&pli=1">
-                <img src="assets/images/Google Play.png" alt="Google Play">
+             <div>
+               <a
+                href="https://play.google.com/store/games?device=windows&gl=DE&utm_source=emea_Med&utm_medium=hasem&utm_content=Sep2020&utm_campaign=Evergreen&pcampaignid=MKT-EDR-emea-de-1707522-Med-hasem-py-Evergreen-Sep2020-Text_Search_BKWS%7CONSEM_kwid_43700008794262696&gad_source=1&gclid=CjwKCAjw7NmzBhBLEiwAxrHQ-T2izqgR6qFTMzFJWCxXqmIL71SJdKTtZRed_jXDHREdOTBRCpfNUxoCOuoQAvD_BwE&gclsrc=aw.ds&pli=1"
+                >
+                <img src="assets/images/Google Play.png" alt="Google Play" />
               </a>
-              <a href="https://www.apple.com/de/app-store/">
-                <img src="assets/images/App Store.png" alt="App Store">
-              </a>
+
+             </div> 
+             <div>
+               <a href="https://www.apple.com/de/app-store/">
+                 <img src="assets/images/App Store.png" alt="App Store" />
+               </a>
+
+             </div>
             </div>
           </div>
         </div>
+
         <div class="footer-legal">
           <p>© 2024 Meetup</p>
           <ul>
